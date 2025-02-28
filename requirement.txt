@@ -1,7 +1,4 @@
-time
-re
-os
-requests
-streamlit
-selenium
-webdriver-manager
+requests==2.32.3
+streamlit==1.42.0
+selenium==4.29.0
+webdriver-manager==4.0.2

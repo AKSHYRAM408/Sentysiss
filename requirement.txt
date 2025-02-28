@@ -1,0 +1,8 @@
+time
+re
+os
+requests
+streamlit
+python-dotenv
+selenium
+webdriver-manager

@@ -3,7 +3,6 @@ import re
 import os
 import requests
 import streamlit as st
-from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -11,12 +10,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
-# Load environment variables for local development
-load_dotenv()
-
-# Get API key from Streamlit secrets (cloud) or .env (local)
-GROK_API_KEY = os.getenv("GROQ_API_KEY", st.secrets.get("GROQ_API_KEY"))
-
+# Load environment variables for local developmen
+GROK_API_KEY = st.secrets["GROQ_API_KEY"]
 if not GROK_API_KEY:
     st.error("Error: GROK_API_KEY is not set. Check your .env file or Streamlit secrets.")
     st.stop()
